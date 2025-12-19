@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese with Ren Sensei | القائمة الرئيسية</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Japanese with Ren Sensei | التسوق والأرقام</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a href="https://www.facebook.com/profile.php?id=61578283647310" target="_blank" class="floating-fb">
-        <span>f</span>
-    </a>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <a href="https://www.facebook.com/profile.php?id=61578283647310" target="_blank"
+        class="floating-fb"><span>f</span></a>
 
     <header class="top-header">
         <div class="container">
@@ -30,61 +29,81 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero-section" dir="rtl">
-            <h2 class="main-title">مرحباً بك في رحلة تعلم اليابانية 🇯🇵</h2>
-            <p>اختر درساً للبدء في تعلم اللغة من الصفر.</p>
-        </section>
+    <main class="lesson-page">
+        <div class="container">
+            <nav class="breadcrumb" dir="rtl"><a href="index.html">الرئيسية</a> › التسوق</nav>
 
-        <div class="lesson-grid" dir="rtl">
-            <a href="lesson1.html" class="lesson-card">
-                <div class="card-tag">المفردات</div>
-                <h3>でかい vs 大きい</h3>
-                <p>ما الفرق بين "كبير" الرسمية واللغة العامية؟</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
+            <article dir="rtl">
+                <h2 class="lesson-title">التسوق: "بكم هذا؟"</h2>
 
-            <a href="thank-you.html" class="lesson-card">
-                <div class="card-tag">التواصل</div>
-                <h3>طرق الشكر</h3>
-                <p>متى نستخدم Arigato ومتى نستخدم Gozaimasu؟</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
+                <p class="lesson-intro">عندما تجد شيئاً جميلاً في اليابان، هذه هي الجملة التي ستحتاجها فوراً.</p>
 
-            <a href="apology.html" class="lesson-card">
-                <div class="card-tag">التواصل</div>
-                <h3>الاعتذار في اليابان</h3>
-                <p>الفارق بين Sumimasen و Gomen nasai.</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
+                <section class="lesson-section">
+                    <h3>1. السؤال عن السعر</h3>
+                    <div class="example">
+                        <div class="jp-box">
+                            <span class="jp">これはいくらですか？</span>
+                            <button class="audio-btn-sm" onclick="speak('これはいくらですか')">🔊</button>
+                        </div>
+                        <p class="ar-trans">Kore wa ikura desu ka? - بكم هذا؟</p>
+                    </div>
+                </section>
 
-            <a href="intro.html" class="lesson-card">
-                <div class="card-tag">المحادثة</div>
-                <h3>التعريف بالنفس</h3>
-                <p>كيف تقدم نفسك باليابانية (Hajimemashite).</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
+                <section class="lesson-section">
+                    <h3>2. الأرقام الأساسية (1-5)</h3>
+                    <div class="table-wrapper">
+                        <table class="vocab-table">
+                            <tr>
+                                <td>1 - Ichi (いち)</td>
+                                <td><button class="audio-btn-sm" onclick="speak('いち')">🔊</button></td>
+                            </tr>
+                            <tr>
+                                <td>2 - Ni (に)</td>
+                                <td><button class="audio-btn-sm" onclick="speak('に')">🔊</button></td>
+                            </tr>
+                            <tr>
+                                <td>3 - San (さん)</td>
+                                <td><button class="audio-btn-sm" onclick="speak('さん')">🔊</button></td>
+                            </tr>
+                            <tr>
+                                <td>4 - Yon (よん)</td>
+                                <td><button class="audio-btn-sm" onclick="speak('よん')">🔊</button></td>
+                            </tr>
+                            <tr>
+                                <td>5 - Go (ご)</td>
+                                <td><button class="audio-btn-sm" onclick="speak('ご')">🔊</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>3. عملة اليابان</h3>
+                    <p>لا نقول "دولار"، بل نقول "ين" (En).</p>
+                    <div class="example">
+                        <div class="jp-box">
+                            <span class="jp">100円 (ひゃくえん)</span>
+                            <button class="audio-btn-sm" onclick="speak('ひゃくえん')">🔊</button>
+                        </div>
+                        <p class="ar-trans">Hyaku En - 100 ين ياباني</p>
+                    </div>
+                </section>
+
+                <div class="lesson-footer" style="text-align:center;">
+                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid037cuGEJPkWVjDKJgYdURtz5jrUAshJxwHzRjdtrKBFrzS1A74pdqfcLHGkvVf5jdHl&id=61578283647310"
+                        target="_blank" class="primary-btn" style="background-color: #1877f2;">تابعي الشرح العملي على
+                        فيسبوك 👍</a>
+                    <br><br>
+                    <a href="index.html" class="reveal-btn" style="text-decoration:none;">العودة للقائمة</a>
+                </div>
+            </article>
         </div>
-
-        <section class="contact-section" dir="rtl">
-            <div class="contact-box">
-                <h3>تواصل معنا</h3>
-                <p>تابعوني على فيسبوك للمزيد من الدروس الممتعة</p>
-                <a href="https://www.facebook.com/profile.php?id=61578283647310" target="_blank" class="fb-link">
-                    صفحة فيسبوك الرسمية
-                </a>
-                <p class="yt-soon">YouTube coming soon 🎬</p>
-            </div>
-        </section>
-
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Japanese with Ren Sensei</p>
-        </div>
-    </footer>
-
+    <script>
+        function speak(t) { const u = new SpeechSynthesisUtterance(t); u.lang = 'ja-JP'; u.rate = 0.85; window.speechSynthesis.speak(u); }
+        window.onscroll = function () { const s = document.documentElement.scrollTop, h = document.documentElement.scrollHeight - document.documentElement.clientHeight; document.getElementById("myBar").style.width = (s / h * 100) + "%"; };
+    </script>
 </body>
 
 </html>
