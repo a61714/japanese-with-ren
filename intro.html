@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese with Ren Sensei | التعريف بالنفس</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <header class="top-header">
+        <div class="container">
+            <div class="brand">
+                <h1>Japanese with Ren Sensei</h1>
+                <span dir="rtl">تعلم اليابانية ببساطة مع رين سينسي</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="lesson-page">
+        <div class="container">
+            <nav class="breadcrumb" dir="rtl">
+                <a href="index.html">الرئيسية</a> › التعريف بالنفس
+            </nav>
+
+            <article dir="rtl">
+                <h2 class="lesson-title">
+                    <ruby>自己紹介<rt>じこしょうかい</rt></ruby> - التعريف بالنفس
+                </h2>
+
+                <p class="lesson-intro">التعريف بالنفس هو الخطوة الأولى لبناء علاقة طيبة في اليابان. لنتعلم كيف تقدم
+                    نفسك باحترافية.</p>
+
+                <section class="lesson-section">
+                    <h3>1. ذكر الاسم</h3>
+                    <p>بدلاً من الصيغ المعقدة، نستخدم الصيغة القياسية والمهذبة:</p>
+                    <div class="example">
+                        <div class="jp-box">
+                            <span class="jp">レン です</span>
+                            <button class="audio-btn-sm" onclick="speak('レンです')">🔊</button>
+                        </div>
+                        <p class="ar-trans">Ren desu - أنا رين</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>2. التعبير عن السعادة باللقاء</h3>
+                    <p>لإظهار الود واللطف، يمكنك إضافة هذه العبارة الرقيقة:</p>
+                    <div class="example">
+                        <div class="jp-box">
+                            <span class="jp">お会いできて嬉しいです</span>
+                            <button class="audio-btn-sm" onclick="speak('お会いできて嬉しいです')">🔊</button>
+                        </div>
+                        <p class="ar-trans">O-ai dekite ureshii desu - أنا سعيد بلقائك</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>3. عبارة الختام الرسمية</h3>
+                    <p>لا يكتمل التعارف بدون طلب التعاون المستقبلي:</p>
+                    <div class="example">
+                        <div class="jp-box">
+                            <span class="jp">よろしくお願いします</span>
+                            <button class="audio-btn-sm" onclick="speak('よろしくお願いします')">🔊</button>
+                        </div>
+                        <p class="ar-trans">Yoroshiku onegaishimasu - سعدت بلقائك / أرجو منك حسن معاملتي</p>
+                    </div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>اختبر نفسك (التحدي الكامل)</h3>
+                    <div class="practice-box">
+                        <p class="jp-large">はじめまして、レンです。よろしくお願いします。</p>
+                        <button class="reveal-btn" onclick="toggleTranslation()">أظهر الترجمة</button>
+                        <p id="practiceTrans" class="translation-text">تشرفنا، أنا رين. يسعدني التعرف عليك.</p>
+                    </div>
+                </section>
+
+                <div class="lesson-footer">
+                    <a href="index.html" class="primary-btn">العودة للقائمة الرئيسية</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Japanese with Ren Sensei</p>
+        </div>
+    </footer>
+
+    <script>
+        function speak(t) {
+            const u = new SpeechSynthesisUtterance(t);
+            u.lang = 'ja-JP';
+            u.rate = 0.85;
+            window.speechSynthesis.speak(u);
+        }
+
+        function toggleTranslation() {
+            const trans = document.getElementById('practiceTrans');
+            trans.classList.toggle('show');
+        }
+
+        window.onscroll = function () {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        };
+    </script>
+
+</body>
+
+</html>

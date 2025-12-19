@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese with Ren Sensei | でかい vs 大きい</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <header class="top-header">
+        <div class="container">
+            <div class="brand">
+                <h1>Japanese with Ren Sensei</h1>
+                <span dir="rtl">تعلم اليابانية ببساطة مع رين سينسي</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="lesson-page">
+        <div class="container">
+
+            <nav class="breadcrumb" dir="rtl">
+                <a href="index.html">الرئيسية</a> › المقارنة
+            </nav>
+
+            <article dir="rtl">
+                <h2 class="lesson-title">
+                    <ruby>でかい<rt>dekai</rt></ruby> vs <ruby>大<rt>おお</rt></ruby>きい
+                </h2>
+
+                <p class="lesson-intro">
+                    كلا التعبيرين يعنيان "كبير"، ولكن استخدامهما ونبرتهما يختلفان تماماً في اليابان.
+                </p>
+
+                <section class="lesson-section">
+                    <h3>المعنى والفارق</h3>
+                    <p>
+                        <strong><ruby>大<rt>おお</rt></ruby>きい (Ookii)</strong>: الكلمة القياسية. تستخدم لوصف الأشياء
+                        الكبيرة بشكل عام بطريقة مهذبة ومحايدة.
+                        <br><br>
+                        <strong>でかい (Dekai)</strong>: كلمة عامية قوية. تعني "ضخم جداً" وتوحي بالدهشة، وغالباً ما
+                        يستخدمها الأصدقاء المقربون.
+                    </p>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>جدول المقارنة</h3>
+                    <div class="table-wrapper">
+                        <table class="vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>الكلمة</th>
+                                    <th>الأسلوب</th>
+                                    <th>القوة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="jp-box">
+                                            <span class="jp">大きい</span>
+                                            <button class="audio-btn-sm" onclick="speak('大きい')">🔊</button>
+                                        </div>
+                                    </td>
+                                    <td>رسمي / محايد</td>
+                                    <td>متوسطة</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="jp-box">
+                                            <span class="jp">でかい</span>
+                                            <button class="audio-btn-sm" onclick="speak('でかい')">🔊</button>
+                                        </div>
+                                    </td>
+                                    <td>عامي / خشن</td>
+                                    <td>قوية جداً</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="lesson-section">
+                    <h3>مثال توضيحي</h3>
+                    <div class="example">
+                        <div class="jp-box">
+                            <span class="jp">この<ruby>犬<rt>いぬ</rt></ruby>、でかいね！</span>
+                            <button class="audio-btn-sm" onclick="speak('このいぬ、でかいね')">🔊</button>
+                        </div>
+                        <p class="ar-trans">← هذا الكلب ضخم، أليس كذلك؟!</p>
+                    </div>
+                </section>
+
+                <div class="lesson-footer"
+                    style="display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 40px;">
+
+                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid037cuGEJPkWVjDKJgYdURtz5jrUAshJxwHzRjdtrKBFrzS1A74pdqfcLHGkvVf5jdHl&id=61578283647310&mibextid=ZbWKwL"
+                        target="_blank" class="primary-btn" style="background-color: #1877f2; text-decoration: none;">
+                        شاهد الشرح على فيسبوك 👍
+                    </a>
+
+                    <a href="index.html" class="reveal-btn"
+                        style="text-decoration: none; display: inline-block; background-color: #eee; color: #333; padding: 10px 20px; border-radius: 5px;">
+                        العودة لقائمة الدروس
+                    </a>
+
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Japanese with Ren Sensei</p>
+        </div>
+    </footer>
+    <script>
+        function speak(t) {
+            const u = new SpeechSynthesisUtterance(t);
+            u.lang = 'ja-JP';
+            u.rate = 0.85;
+            window.speechSynthesis.speak(u);
+        }
+
+        window.onscroll = function () {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        };
+    </script>
+
+</body>
+
+</html>
