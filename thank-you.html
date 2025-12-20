@@ -4,125 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>طرق الشكر | Learn Japanese Simply</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>طرق الشكر باليابانية | رين سينسي</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-    </div>
     <header class="top-header">
         <div class="container">
             <div class="brand">
                 <h1>Japanese with Ren Sensei</h1>
-                <span dir="rtl">تعلم اليابانية ببساطة مع رين سينسي</span>
+                <a href="index.html" style="text-decoration: none; color: var(--jp-red); font-weight: bold;">← العودة
+                    للرئيسية</a>
             </div>
         </div>
     </header>
-    <main class="lesson-page">
-        <div class="container">
 
-            <nav class="breadcrumb" dir="rtl">
-                <a href="index.html">الرئيسية</a> › طرق الشكر
-            </nav>
+    <main class="container" dir="rtl">
+        <article class="lesson-content">
+            <h2>طرق الشكر والامتنان</h2>
+            <p>في اليابان، يختلف "الشكر" بناءً على من تتحدث معه ومدى تقديرك للمعروف:</p>
 
-            <article dir="rtl">
-                <h2 class="lesson-title">
-                    <ruby>有<rt>あ</rt>り</ruby><ruby>難<rt>がとう</rt></ruby>う - طرق الشكر
-                </h2>
+            <div
+                style="background: white; padding: 20px; border-radius: 15px; border-right: 5px solid #1877f2; margin: 20px 0;">
+                <h3>1. Arigato Gozaimasu (ありがとう ございます)</h3>
+                <p>الطريقة الرسمية والمهذبة. استخدمها مع المعلمين، الغرباء، وفي العمل.</p>
 
-                <p class="lesson-intro">
-                    في اليابان، تختلف طريقة قول "شكراً" بناءً على الشخص الذي تتحدث إليه. إليك أهم الفروقات.
-                </p>
+                <h3>2. Arigato (ありがとう)</h3>
+                <p>طريقة ودية نستخدمها مع الأصدقاء وأفراد العائلة.</p>
 
-                <section class="lesson-section">
-                    <h3>1. الأسلوب الرسمي (Polite)</h3>
-                    <p>يُستخدم مع الغرباء، المعلمين، أو في العمل.</p>
-                    <div class="example">
-                        <div class="jp-box">
-                            <span class="jp">ありがとうございます</span>
-                            <button class="audio-btn-sm" onclick="speak('ありがとうございます')">🔊</button>
-                        </div>
-                        <p class="ar-trans">Arigatou Gozaimasu - شكراً جزيلاً</p>
-                    </div>
-                </section>
+                <h3>3. Domo (どうも)</h3>
+                <p>شكر سريع ومختصر (مثل "شكراً" السريعة)، وتستخدم غالباً في المحلات أو مع الأصدقاء.</p>
+            </div>
+        </article>
 
-                <section class="lesson-section">
-                    <h3>2. الأسلوب العامي (Casual)</h3>
-                    <p>يُستخدم فقط مع الأصدقاء المقربين أو أفراد العائلة.</p>
-                    <div class="example">
-                        <div class="jp-box">
-                            <span class="jp">ありがとう</span>
-                            <button class="audio-btn-sm" onclick="speak('ありがとう')">🔊</button>
-                        </div>
-                        <p class="ar-trans">Arigatou - شكراً</p>
-                    </div>
-                </section>
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ddd;">
 
-                <section class="lesson-section">
-                    <h3>3. الشكر في الماضي</h3>
-                    <p>إذا كنت تشكر شخصاً على معروف قام به في وقت سابق (انتهى الفعل).</p>
-                    <div class="example">
-                        <div class="jp-box">
-                            <span class="jp">ありがとうございました</span>
-                            <button class="audio-btn-sm" onclick="speak('ありがとうございました')">🔊</button>
-                        </div>
-                        <p class="ar-trans">Arigatou Gozaimashita - شكراً لك (على ما فعلت)</p>
-                    </div>
-                </section>
+        <section class="quiz-section">
+            <h3 style="text-align: center; color: var(--jp-red);">📝 اختبر مهاراتك في الشكر</h3>
 
-                <section class="lesson-section">
-                    <h3>اختبر نفسك</h3>
-                    <div class="practice-box">
-                        <p class="jp-large">どうもありがとうございます。</p>
-                        <button class="reveal-btn" onclick="toggleTranslation()">أظهر الترجمة</button>
-                        <p id="practiceTrans" class="translation-text">شكراً جزيلاً لك (أسلوب شديد التأدب).</p>
-                    </div>
-                </section>
-
-                <div class="lesson-footer">
-                    <a href="index.html" class="primary-btn">العودة للقائمة الرئيسية</a>
+            <div id="quiz-area">
+                <div class="quiz-item" style="margin-bottom: 20px;">
+                    <p>1. كيف تشكر مديرك في العمل بطريقة رسمية؟</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">Arigato Gozaimasu</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Domo</button>
                 </div>
 
-            </article>
-        </div>
+                <div class="quiz-item" style="margin-bottom: 20px;">
+                    <p>2. أي كلمة هي الأقصر والأكثر سرعة في المواقف العابرة؟</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">Domo</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Arigato Gozaimasu</button>
+                </div>
+
+                <div class="quiz-item" style="margin-bottom: 20px;">
+                    <p>3. ماذا تقول لصديقك المقرب الذي قدم لك هدية؟</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">Arigato</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Moushiwake gozaimasen</button>
+                </div>
+
+                <div class="quiz-item" style="margin-bottom: 20px;">
+                    <p>4. كيف تقول "شكراً" على شيء حدث "في الماضي" (انتهى)؟</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">Arigato Gozaimashita</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Arigato Gozaimasu</button>
+                </div>
+
+                <div class="quiz-item" style="margin-bottom: 20px;">
+                    <p>5. ما هو الرد المناسب على Arigato (بمعنى عفواً)؟</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">Dou itashimashite</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Gomen ne</button>
+                </div>
+            </div>
+
+            <div id="quiz-msg"
+                style="text-align: center; margin-top: 20px; font-size: 1.5rem; font-weight: bold; color: var(--success);">
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Learn Japanese Simply</p>
-        </div>
-    </footer>
-
     <script>
-        // Script directly inside for reliability
-        function speak(text) {
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'ja-JP';
-            utterance.rate = 0.85;
-            window.speechSynthesis.speak(utterance);
+        let score = 0;
+        const currentPage = "thank-you.html";
+
+        function processQuiz(btn, isCorrect) {
+            if (isCorrect && !btn.classList.contains('correct')) {
+                btn.classList.add('correct');
+                btn.parentElement.querySelectorAll('.quiz-option').forEach(b => b.style.pointerEvents = 'none');
+
+                score++;
+
+                if (score >= 5) {
+                    document.getElementById('quiz-msg').innerHTML = "أحسنت عمل رائع 👏🏻";
+                    saveProgress(currentPage);
+                }
+            } else if (!isCorrect) {
+                btn.classList.add('wrong');
+                setTimeout(() => btn.classList.remove('wrong'), 500);
+            }
         }
 
-        function toggleTranslation() {
-            const trans = document.getElementById('practiceTrans');
-            trans.classList.toggle('show');
+        function saveProgress(filename) {
+            let list = JSON.parse(localStorage.getItem('completedLessons') || "[]");
+            if (!list.includes(filename)) {
+                list.push(filename);
+                localStorage.setItem('completedLessons', JSON.stringify(list));
+            }
         }
-
-        window.onscroll = function () {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("myBar").style.width = scrolled + "%";
-        };
     </script>
 
 </body>

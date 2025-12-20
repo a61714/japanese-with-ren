@@ -4,106 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese with Ren Sensei | التسوق والأرقام</title>
+    <title>الدرس 5: الأرقام الكبيرة والتسوق | رين سينسي</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-    </div>
-
-    <a href="https://www.facebook.com/profile.php?id=61578283647310" target="_blank"
-        class="floating-fb"><span>f</span></a>
-
     <header class="top-header">
         <div class="container">
-            <div class="brand">
-                <h1>Japanese with Ren Sensei</h1>
-                <span dir="rtl">تعلم اللغة اليابانية ببساطة مع رين سينسي</span>
-            </div>
+            <h1>LEARN JAPANESE WITH REN SENSEI</h1>
+            <a href="index.html" style="text-decoration: none; color: white; font-weight: bold; font-size: 0.9rem;">←
+                العودة للرئيسية</a>
         </div>
     </header>
 
-    <main class="lesson-page">
-        <div class="container">
-            <nav class="breadcrumb" dir="rtl"><a href="index.html">الرئيسية</a> › التسوق</nav>
+    <main class="container" dir="rtl">
+        <article class="lesson-content">
+            <h2 style="color: var(--nhk-blue); border-bottom: 2px solid var(--nhk-blue); padding-bottom: 10px;">الدرس 5:
+                الأرقام الكبيرة والتعامل التجاري</h2>
 
-            <article dir="rtl">
-                <h2 class="lesson-title">التسوق: "بكم هذا؟"</h2>
+            <section>
+                <h3>1. الأرقام الكبيرة (المئات والآلاف)</h3>
+                <p>عند التسوق في اليابان، ستحتاج حتماً للأرقام الكبيرة لأن قيمة الين (Yen) تجعل الأسعار تصل للآلاف
+                    بسهولة.</p>
 
-                <p class="lesson-intro">عندما تجد شيئاً جميلاً في اليابان، هذه هي الجملة التي ستحتاجها فوراً.</p>
+                <table class="vocab-table">
+                    <thead>
+                        <tr>
+                            <th>الرقم</th>
+                            <th>بالكانجي</th>
+                            <th>القراءة (Romaji)</th>
+                            <th>الترجمة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100</td>
+                            <td>百</td>
+                            <td>Hyaku</td>
+                            <td>مئة</td>
+                        </tr>
+                        <tr>
+                            <td>1,000</td>
+                            <td>千</td>
+                            <td>Sen</td>
+                            <td>ألف</td>
+                        </tr>
+                        <tr>
+                            <td>10,000</td>
+                            <td>万</td>
+                            <td>Man</td>
+                            <td>عشرة آلاف</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                <section class="lesson-section">
-                    <h3>1. السؤال عن السعر</h3>
-                    <div class="example">
-                        <div class="jp-box">
-                            <span class="jp">これはいくらですか？</span>
-                            <button class="audio-btn-sm" onclick="speak('これはいくらですか')">🔊</button>
-                        </div>
-                        <p class="ar-trans">Kore wa ikura desu ka? - بكم هذا؟</p>
-                    </div>
-                </section>
-
-                <section class="lesson-section">
-                    <h3>2. الأرقام الأساسية (1-5)</h3>
-                    <div class="table-wrapper">
-                        <table class="vocab-table">
-                            <tr>
-                                <td>1 - Ichi (いち)</td>
-                                <td><button class="audio-btn-sm" onclick="speak('いち')">🔊</button></td>
-                            </tr>
-                            <tr>
-                                <td>2 - Ni (に)</td>
-                                <td><button class="audio-btn-sm" onclick="speak('に')">🔊</button></td>
-                            </tr>
-                            <tr>
-                                <td>3 - San (さん)</td>
-                                <td><button class="audio-btn-sm" onclick="speak('さん')">🔊</button></td>
-                            </tr>
-                            <tr>
-                                <td>4 - Yon (よん)</td>
-                                <td><button class="audio-btn-sm" onclick="speak('よん')">🔊</button></td>
-                            </tr>
-                            <tr>
-                                <td>5 - Go (ご)</td>
-                                <td><button class="audio-btn-sm" onclick="speak('ご')">🔊</button></td>
-                            </tr>
-                        </table>
-                    </div>
-                </section>
-
-                <section class="lesson-section">
-                    <h3>3. عملة اليابان</h3>
-                    <p>لا نقول "دولار"، بل نقول "ين" (En).</p>
-                    <div class="example">
-                        <div class="jp-box">
-                            <span class="jp">100円 (ひゃくえん)</span>
-                            <button class="audio-btn-sm" onclick="speak('ひゃくえん')">🔊</button>
-                        </div>
-                        <p class="ar-trans">Hyaku En - 100 ين ياباني</p>
-                    </div>
-                </section>
-
-                <div class="lesson-footer" style="text-align:center;">
-                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid037cuGEJPkWVjDKJgYdURtz5jrUAshJxwHzRjdtrKBFrzS1A74pdqfcLHGkvVf5jdHl&id=61578283647310"
-                        target="_blank" class="primary-btn" style="background-color: #1877f2;">تابعي الشرح العملي على
-                        فيسبوك 👍</a>
-                    <br><br>
-                    <a href="index.html" class="reveal-btn" style="text-decoration:none;">العودة للقائمة</a>
+                <div
+                    style="background: #fdf2f2; padding: 15px; border-right: 5px solid var(--jp-red); margin: 20px 0; border-radius: 5px;">
+                    <strong>قاعدة الـ Man (万):</strong> على عكس اللغة العربية والإنجليزية التي تعتمد على "الألف" كقاعدة
+                    (10k = عشرة آلاف)، اليابانية لديها كلمة خاصة لكل 10,000 وهي <strong>Man</strong>. لذا 20,000 ين هي
+                    (Ni-man en).
                 </div>
-            </article>
-        </div>
+            </section>
+
+            <section style="margin-top: 30px;">
+                <h3>2. الحوار داخل المتجر</h3>
+                <p>إليك كيف تدير حواراً احترافياً عند الشراء:</p>
+
+                <table class="vocab-table">
+                    <thead>
+                        <tr>
+                            <th>العبارة اليابانية</th>
+                            <th>القراءة</th>
+                            <th>الاستخدام</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 1.2rem;">見せてください</td>
+                            <td>Misete kudasai</td>
+                            <td>
+                                <button class="show-translation-btn" onclick="toggleTranslation(this)">أظهر
+                                    الترجمة</button>
+                                <div class="translation-text">أرني هذا من فضلك (عند طلب رؤية غرض)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 1.2rem;">カードは使えますか</td>
+                            <td>Kaado wa tsukaemasu ka?</td>
+                            <td>
+                                <button class="show-translation-btn" onclick="toggleTranslation(this)">أظهر
+                                    الترجمة</button>
+                                <div class="translation-text">هل يمكنني استخدام البطاقة الائتمانية؟</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="quiz-section" style="margin-top: 40px;">
+                <h3 style="color: var(--nhk-blue); text-align: center;">📝 اختبار الأرقام والأسعار</h3>
+                <div id="quiz-area">
+                    <p>1. كيف تقول "300" باليابانية؟ (تلميح: 3 + 100)</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">San-hyaku (三百)</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Hyaku-san</button>
+                    <p>2. ما هي الكلمة التي تعني "10,000"؟</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">Man (万)</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Sen (千)</button>
+
+                    <p>3. إذا كان سعر القميص 2000 ين، ماذا سيقول البائع؟</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">Ni-sen en desu</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Ni-hyaku en desu</button>
+
+                    <p>4. كيف تطلب "رؤية" ساعة داخل واجهة عرض؟</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">Misete kudasai</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">Ikura desu ka</button>
+
+                    <p>5. "San-man en" تعني بالعملة العربية:</p>
+                    <button class="quiz-option" onclick="processQuiz(this, true)">30,000 ين</button>
+                    <button class="quiz-option" onclick="processQuiz(this, false)">3,000 ين</button>
+                </div>
+                <div id="quiz-msg"
+                    style="text-align: center; margin-top: 20px; font-size: 1.5rem; font-weight: bold; color: var(--success);">
+                </div>
+            </section>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <p>هل تريد تعلم عدّ العملات المعدنية والورقية؟ تابعونا:</p>
+                <a href="https://www.facebook.com/share/1HHhsEmRT9/" target="_blank" class="fb-footer-btn">
+                    صفحة رين سينسي على فيسبوك 🔗
+                </a>
+            </div>
+        </article>
     </main>
 
     <script>
-        function speak(t) { const u = new SpeechSynthesisUtterance(t); u.lang = 'ja-JP'; u.rate = 0.85; window.speechSynthesis.speak(u); }
-        window.onscroll = function () { const s = document.documentElement.scrollTop, h = document.documentElement.scrollHeight - document.documentElement.clientHeight; document.getElementById("myBar").style.width = (s / h * 100) + "%"; };
+        let score = 0;
+        const currentPage = "shopping.html";
+
+        function toggleTranslation(btn) {
+            const translation = btn.nextElementSibling;
+            if (translation.style.display === "block") {
+                translation.style.display = "none";
+                btn.innerText = "أظهر الترجمة";
+            } else {
+                translation.style.display = "block";
+                btn.innerText = "إخفاء الترجمة";
+            }
+        }
+
+        function processQuiz(btn, isCorrect) {
+            if (isCorrect && !btn.classList.contains('correct')) {
+                btn.classList.add('correct');
+                btn.parentElement.querySelectorAll('.quiz-option').forEach(b => b.style.pointerEvents = 'none');
+                score++;
+                if (score >= 5) {
+                    document.getElementById('quiz-msg').innerHTML = "أحسنت عمل رائع 👏🏻";
+                    saveProgress(currentPage);
+                }
+            } else if (!isCorrect) {
+                btn.classList.add('wrong');
+                setTimeout(() => btn.classList.remove('wrong'), 500);
+            }
+        }
+
+        function saveProgress(filename) {
+            let list = JSON.parse(localStorage.getItem('completedLessons') || "[]");
+            if (!list.includes(filename)) {
+                list.push(filename);
+                localStorage.setItem('completedLessons', JSON.stringify(list));
+            }
+        }
     </script>
+
 </body>
 
 </html>

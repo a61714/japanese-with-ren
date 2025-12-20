@@ -4,145 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese with Ren Sensei | でかい vs 大きい</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>كبير ضخم: でかい vs 大きい | رين سينسي</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-    </div>
-
     <header class="top-header">
         <div class="container">
             <div class="brand">
                 <h1>Japanese with Ren Sensei</h1>
-                <span dir="rtl">تعلم اليابانية ببساطة مع رين سينسي</span>
+                <a href="index.html" style="text-decoration: none; color: var(--jp-red); font-weight: bold;">← العودة
+                    للرئيسية</a>
             </div>
         </div>
     </header>
 
-    <main class="lesson-page">
-        <div class="container">
+    <main class="container" dir="rtl">
+        <article class="lesson-content">
+            <h2>الفرق بين でかい (Dekai) و 大きい (Ookii)</h2>
+            <p>في اللغة اليابانية، هناك عدة طرق للتعبير عن الأحجام، ولكن اختيار الكلمة يعتمد على "لمن تتحدث".</p>
 
-            <nav class="breadcrumb" dir="rtl">
-                <a href="index.html">الرئيسية</a> › المقارنة
-            </nav>
+            <section style="background: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+                <h3>1. 大きい (Ookii)</h3>
+                <p>هي الكلمة القياسية والرسمية. تستخدم في العمل، مع الغرباء، وفي الكتب.</p>
 
-            <article dir="rtl">
-                <h2 class="lesson-title">
-                    <ruby>でかい<rt>dekai</rt></ruby> vs <ruby>大<rt>おお</rt></ruby>きい
-                </h2>
+                <h3>2. でかい (Dekai)</h3>
+                <p>كلمة عامية (Slang). تعني "ضخم" أو "كبير جداً". تستخدم بين الأصدقاء الشباب، وتوحي بالمفاجأة.</p>
+            </section>
 
-                <p class="lesson-intro">
-                    كلا التعبيرين يعنيان "كبير"، ولكن استخدامهما ونبرتهما يختلفان تماماً في اليابان.
-                </p>
+            <hr>
 
-                <section class="lesson-section">
-                    <h3>المعنى والفارق</h3>
-                    <p>
-                        <strong><ruby>大<rt>おお</rt></ruby>きい (Ookii)</strong>: الكلمة القياسية. تستخدم لوصف الأشياء
-                        الكبيرة بشكل عام بطريقة مهذبة ومحايدة.
-                        <br><br>
-                        <strong>でかい (Dekai)</strong>: كلمة عامية قوية. تعني "ضخم جداً" وتوحي بالدهشة، وغالباً ما
-                        يستخدمها الأصدقاء المقربون.
-                    </p>
-                </section>
+            <section class="quiz-section">
+                <h3 style="text-align: center;">اختبر نفسك (أجب على 5 أسئلة صحيحة) 📝</h3>
 
-                <section class="lesson-section">
-                    <h3>جدول المقارنة</h3>
-                    <div class="table-wrapper">
-                        <table class="vocab-table">
-                            <thead>
-                                <tr>
-                                    <th>الكلمة</th>
-                                    <th>الأسلوب</th>
-                                    <th>القوة</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="jp-box">
-                                            <span class="jp">大きい</span>
-                                            <button class="audio-btn-sm" onclick="speak('大きい')">🔊</button>
-                                        </div>
-                                    </td>
-                                    <td>رسمي / محايد</td>
-                                    <td>متوسطة</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="jp-box">
-                                            <span class="jp">でかい</span>
-                                            <button class="audio-btn-sm" onclick="speak('でかい')">🔊</button>
-                                        </div>
-                                    </td>
-                                    <td>عامي / خشن</td>
-                                    <td>قوية جداً</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div id="quiz-container">
+                    <div class="quiz-item">
+                        <p>1. أي كلمة تستخدمها في مقابلة عمل لوصف شركة كبيرة؟</p>
+                        <button class="quiz-option" onclick="processQuiz(this, true)">Ookii (大きい)</button>
+                        <button class="quiz-option" onclick="processQuiz(this, false)">Dekai (でかい)</button>
                     </div>
-                </section>
 
-                <section class="lesson-section">
-                    <h3>مثال توضيحي</h3>
-                    <div class="example">
-                        <div class="jp-box">
-                            <span class="jp">この<ruby>犬<rt>いぬ</rt></ruby>、でかいね！</span>
-                            <button class="audio-btn-sm" onclick="speak('このいぬ、でかいね')">🔊</button>
-                        </div>
-                        <p class="ar-trans">← هذا الكلب ضخم، أليس كذلك؟!</p>
+                    <div class="quiz-item">
+                        <p>2. إذا رأيت وحشاً ضخماً فجأة في فيلم أنمي، فماذا سيقول البطل غالباً؟</p>
+                        <button class="quiz-option" onclick="processQuiz(this, true)">Dekai! (でかい!)</button>
+                        <button class="quiz-option" onclick="processQuiz(this, false)">Ookii desu.</button>
                     </div>
-                </section>
 
-                <div class="lesson-footer"
-                    style="display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 40px;">
+                    <div class="quiz-item">
+                        <p>3. (صعب) كيف نحول Dekai إلى صيغة الماضي (كان كبيراً)؟</p>
+                        <button class="quiz-option" onclick="processQuiz(this, true)">Dekatta (でかかった)</button>
+                        <button class="quiz-option" onclick="processQuiz(this, false)">Dekai deshita</button>
+                    </div>
 
-                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid037cuGEJPkWVjDKJgYdURtz5jrUAshJxwHzRjdtrKBFrzS1A74pdqfcLHGkvVf5jdHl&id=61578283647310&mibextid=ZbWKwL"
-                        target="_blank" class="primary-btn" style="background-color: #1877f2; text-decoration: none;">
-                        شاهد الشرح على فيسبوك 👍
-                    </a>
+                    <div class="quiz-item">
+                        <p>4. هل كلمة "Dekai" تعتبر مهذبة عند التحدث مع كبار السن؟</p>
+                        <button class="quiz-option" onclick="processQuiz(this, false)">نعم، عادية</button>
+                        <button class="quiz-option" onclick="processQuiz(this, true)">لا، تعتبر غير رسمية جداً</button>
+                    </div>
 
-                    <a href="index.html" class="reveal-btn"
-                        style="text-decoration: none; display: inline-block; background-color: #eee; color: #333; padding: 10px 20px; border-radius: 5px;">
-                        العودة لقائمة الدروس
-                    </a>
-
+                    <div class="quiz-item">
+                        <p>5. (تحدي) ما هو عكس كلمة 大きい؟</p>
+                        <button class="quiz-option" onclick="processQuiz(this, true)">Chiisai (小さい)</button>
+                        <button class="quiz-option" onclick="processQuiz(this, false)">Sukoshi (少し)</button>
+                    </div>
                 </div>
 
-            </article>
-        </div>
+                <div id="quiz-msg"
+                    style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--success);"></div>
+            </section>
+        </article>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Japanese with Ren Sensei</p>
-        </div>
-    </footer>
     <script>
-        function speak(t) {
-            const u = new SpeechSynthesisUtterance(t);
-            u.lang = 'ja-JP';
-            u.rate = 0.85;
-            window.speechSynthesis.speak(u);
+        let score = 0;
+        // نحصل على اسم الملف الحالي (lesson1.html)
+        const currentPage = window.location.pathname.split("/").pop();
+
+        function processQuiz(btn, isCorrect) {
+            if (isCorrect && !btn.classList.contains('correct')) {
+                btn.classList.add('correct');
+                // تعطيل الأزرار الأخرى في نفس السؤال
+                const parent = btn.parentElement;
+                const buttons = parent.querySelectorAll('.quiz-option');
+                buttons.forEach(b => b.style.pointerEvents = 'none');
+
+                score++;
+
+                if (score >= 5) {
+                    document.getElementById('quiz-msg').innerHTML = "🎉 أحسنتِ يا رين سينسي! لقد أتممتِ الدرس بنجاح وتم تسجيل تقدمك.";
+                    saveProgress(currentPage);
+                }
+            } else if (!isCorrect) {
+                btn.classList.add('wrong');
+                setTimeout(() => btn.classList.remove('wrong'), 500);
+            }
         }
 
-        window.onscroll = function () {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("myBar").style.width = scrolled + "%";
-        };
+        function saveProgress(filename) {
+            let list = JSON.parse(localStorage.getItem('completedLessons') || "[]");
+            if (!list.includes(filename)) {
+                list.push(filename);
+                localStorage.setItem('completedLessons', JSON.stringify(list));
+            }
+        }
     </script>
 
 </body>

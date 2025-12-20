@@ -4,102 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Japanese with Ren Sensei | القائمة الرئيسية</title>
-    <meta property="og:title" content="Japanese with Ren Sensei">
-    <meta property="og:description" content="تعلم اللغة اليابانية ببساطة ومتعة مع دروس تفاعلية مع رين سينسي.">
-    <meta property="og:image" content="https://a61714.github.io/japanese-with-ren/preview-image.jpg">
-    <meta property="og:url" content="https://a61714.github.io/japanese-with-ren/">
-    <meta property="og:type" content="website">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Japanese with Ren Sensei | NHK Style</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* إضافة التعديل هنا مباشرة لضمان الحجم الكبير */
+        .kanji-display {
+            font-size: 150px !important;
+        }
+    </style>
 </head>
 
 <body>
 
-    <a href="https://www.facebook.com/profile.php?id=61578283647310" target="_blank" class="floating-fb">
-        <span>f</span>
-    </a>
-
     <header class="top-header">
         <div class="container">
-            <div class="brand">
-                <h1>Japanese with Ren Sensei</h1>
-                <span dir="rtl">تعلم اللغة اليابانية ببساطة مع رين سينسي</span>
-            </div>
+            <h1>LEARN JAPANESE WITH REN SENSEI</h1>
+            <p dir="rtl" style="margin: 10px 0 0 0; opacity: 0.9;">دروس اللغة اليابانية بأسلوب NHK الاحترافي</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="hero-section" dir="rtl">
-            <h2 class="main-title">مرحباً بك في رحلة تعلم اليابانية 🇯🇵</h2>
-            <p>اختر درساً للبدء في تعلم اللغة من الصفر.</p>
-        </section>
-
-        <div class="lesson-grid" dir="rtl">
-
-            <a href="lesson1.html" class="lesson-card">
-                <div class="card-tag">المفردات</div>
-                <h3>でかい vs 大きい</h3>
-                <p>ما الفرق بين "كبير" الرسمية واللغة العامية؟</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
-
-            <a href="thank-you.html" class="lesson-card">
-                <div class="card-tag">التواصل</div>
-                <h3>طرق الشكر</h3>
-                <p>متى نستخدم Arigato ومتى نستخدم Gozaimasu؟</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
-
-            <a href="apology.html" class="lesson-card">
-                <div class="card-tag">التواصل</div>
-                <h3>الاعتذار في اليابان</h3>
-                <p>الفارق بين Sumimasen و Gomen nasai.</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
-
-            <a href="intro.html" class="lesson-card">
-                <div class="card-tag">المحادثة</div>
-                <h3>التعريف بالنفس</h3>
-                <p>كيف تقدم نفسك باليابانية (Hajimemashite).</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
-
-            <a href="shopping.html" class="lesson-card">
-                <div class="card-tag">حياة يومية</div>
-                <h3>التسوق والأرقام</h3>
-                <p>تعلم كيف تسأل عن السعر وتعد الأرقام باليابانية.</p>
-                <span class="start-btn">ابدأ الدرس ←</span>
-            </a>
-
-        </div>
-
-        <section class="contact-section" dir="rtl">
-            <div class="contact-box">
-                <h3>تواصل معنا</h3>
-                <p>تابعوني على فيسبوك للمزيد من الدروس الممتعة</p>
-                <a href="https://www.facebook.com/profile.php?id=61578283647310" target="_blank" class="fb-link">
-                    صفحة فيسبوك الرسمية 👍
-                </a>
-                <p class="yt-soon">YouTube coming soon 🎬</p>
+        <section class="kanji-day-container" dir="rtl">
+            <div class="kanji-card">
+                <div style="color: var(--nhk-blue); font-weight: bold; margin-bottom: 5px; font-size: 1.2rem;">🏮 كانجي
+                    اليوم</div>
+                <div class="kanji-display" id="kanjiCharacter">...</div>
+                <h2 id="kanjiMeaning" style="color:var(--jp-red); margin: 0; font-size: 2.5rem;">...</h2>
+                <p style="font-size: 1.2rem; margin-top: 10px;">النطق: <strong id="kanjiReading">...</strong></p>
+                <button class="share-btn" onclick="shareToFB()" style="margin-top:20px;">انشر التحدي على فيسبوك
+                    📢</button>
             </div>
         </section>
 
+        <section class="search-section" dir="rtl">
+            <input type="text" id="lessonSearch" placeholder="🔍 ابحث عن درس... (مثلاً: أرقام، اعتذار، تعريف)"
+                onkeyup="filterLessons()">
+        </section>
+
+        <div class="lesson-grid" id="lessonGrid" dir="rtl">
+            <a href="lesson1.html" class="lesson-card">
+                <span class="completed-badge">✓ تم الإكمال</span>
+                <h3>الدرس 1: でかい vs 大きい</h3>
+                <p>تعلم الفرق بين "كبير" الرسمية والعامية بأسلوب NHK.</p>
+            </a>
+            <a href="thank-you.html" class="lesson-card">
+                <span class="completed-badge">✓ تم الإكمال</span>
+                <h3>الدرس 2: طرق الشكر باليابانية</h3>
+                <p>كيف تشكر الناس بمختلف مستويات الأدب.</p>
+            </a>
+            <a href="apology.html" class="lesson-card">
+                <span class="completed-badge">✓ تم الإكمال</span>
+                <h3>الدرس 3: فن الاعتذار</h3>
+                <p>متى نستخدم Sumimasen ومتى نستخدم Gomen؟</p>
+            </a>
+            <a href="intro.html" class="lesson-card">
+                <span class="completed-badge">✓ تم الإكمال</span>
+                <h3>الدرس 4: التعريف بالنفس</h3>
+                <p>كيف تقدم نفسك باحترافية (Jikoshoukai).</p>
+            </a>
+            <a href="shopping.html" class="lesson-card">
+                <span class="completed-badge">✓ تم الإكمال</span>
+                <h3>الدرس 5: الأرقام والتسوق</h3>
+                <p>كيفية السؤال عن السعر وفهم الأرقام الأساسية.</p>
+            </a>
+            <a href="numbers.html" class="lesson-card">
+                <span class="completed-badge">✓ تم الإكمال</span>
+                <h3>الدرس 6: الأرقام في اليابانية</h3>
+                <p>تعلم كيفية بناء الأرقام من 1 حتى 99 بأسلوب منطقي.</p>
+            </a>
+        </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer-section" dir="rtl">
         <div class="container">
-            <p>© 2025 Japanese with Ren Sensei</p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 40px;">
+            <h3>✨ انضموا إلى مجتمع رين سينسي</h3>
+            <p>لمتابعة الدروس اليومية والتواصل المباشر معي، تابعوني على صفحتي الرسمية:</p>
+            <a href="https://www.facebook.com/share/1HHhsEmRT9/" target="_blank" class="fb-footer-btn">
+                تابعوني على فيسبوك | Ren Sensei FB 🔗
+            </a>
+            <p style="margin-top: 40px; font-size: 0.8rem; color: #888;">&copy; 2025 Japanese with Ren Sensei | NHK
+                World Style</p>
         </div>
     </footer>
 
+    <script>
+        const kanjiList = [
+            { char: "一", mean: "واحد", read: "Ichi" }, { char: "二", mean: "اثنان", read: "Ni" },
+            { char: "三", mean: "ثلاثة", read: "San" }, { char: "日", mean: "يوم", read: "Hi" },
+            { char: "月", mean: "قمر", read: "Tsuki" }, { char: "大", mean: "كبير", read: "Dai" },
+            { char: "木", mean: "شجرة", read: "Ki" }, { char: "山", mean: "جبل", read: "Yama" }
+        ];
+
+        function updateDailyKanji() {
+            var today = new Date();
+            var index = (today.getFullYear() + today.getMonth() + today.getDate()) % kanjiList.length;
+            var k = kanjiList[index];
+            document.getElementById('kanjiCharacter').innerText = k.char;
+            document.getElementById('kanjiMeaning').innerText = k.mean;
+            document.getElementById('kanjiReading').innerText = k.read;
+        }
+
+        function filterLessons() {
+            var input = document.getElementById('lessonSearch').value.toLowerCase();
+            var cards = document.querySelectorAll('.lesson-card');
+            cards.forEach(function (card) {
+                var text = card.innerText.toLowerCase();
+                card.style.display = text.indexOf(input) > -1 ? "block" : "none";
+            });
+        }
+
+        function shareToFB() {
+            var k = document.getElementById('kanjiCharacter').innerText;
+            var m = document.getElementById('kanjiMeaning').innerText;
+            var myPageUrl = "https://www.facebook.com/share/1HHhsEmRT9/";
+            var text = "تحدي كانجي اليوم من رين سينسي: " + k + " ومعناه: " + m;
+            window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(myPageUrl) + "&quote=" + encodeURIComponent(text), "_blank");
+        }
+
+        window.onload = function () {
+            updateDailyKanji();
+            var completed = JSON.parse(localStorage.getItem('completedLessons') || "[]");
+            document.querySelectorAll('.lesson-card').forEach(function (card) {
+                var href = card.getAttribute('href');
+                if (completed.indexOf(href) > -1) {
+                    card.classList.add('is-done');
+                }
+            });
+        };
+    </script>
 </body>
 
 </html>
