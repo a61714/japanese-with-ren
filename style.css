@@ -216,3 +216,47 @@ body {
     color: #444;
     border-right: 4px solid var(--nhk-blue);
 }
+
+/* ألوان وتنسيقات قسم العامية (Slang) */
+
+/* علامة "جديد" أو "عامية" فوق البطاقة */
+.slang-tag {
+    background: var(--jp-red);
+    color: white;
+    padding: 3px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* بطاقة Hub العامية الملونة */
+.slang-hub-card {
+    background: #fffafa !important;
+    /* خلفية تميل للاحمرار خفيف */
+    border-right: 10px solid var(--jp-red) !important;
+}
+
+.slang-hub-card:hover {
+    background: #ffebeb !important;
+    transform: translateY(-5px);
+}
+
+/* تنسيق إضافي لزر أظهر الترجمة داخل دروس العامية */
+.slang-vocab-box {
+    background: #fdfdfd;
+    border: 1px dashed var(--jp-red);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.hub-category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+}

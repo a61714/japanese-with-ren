@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العامية اليابانية | رين سينسي</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="container">
+            <h1>JAPANESE SLANG HUB ⚡</h1>
+            <a href="index.html" style="text-decoration: none; color: white; font-weight: bold;">← العودة للرئيسية</a>
+        </div>
+    </header>
+
+    <main class="container" dir="rtl">
+        <section class="lesson-content">
+            <h2 style="color: var(--jp-red);">مرحباً بكم في عالم الـ Slang!</h2>
+            <p>هنا نتعلم كيف يتحدث اليابانيون في الشارع، الأنمي، ومع الأصدقاء. دروس قصيرة وممتعة لتجعل لغتك تبدو طبيعية
+                أكثر.</p>
+
+            <div class="lesson-grid" style="margin-top: 30px;">
+                <a href="slang-expressions.html" class="lesson-card" style="border-right-color: #ff9800;">
+                    <span class="completed-badge">✓ تم الإكمال</span>
+                    <h3>1. تعبيرات الدهشة والحماس</h3>
+                    <p>تعلم كلمات مثل Yabai و Sugoi وكيف تختلف في الشارع.</p>
+                </a>
+
+                <a href="slang-social.html" class="lesson-card" style="border-right-color: #9c27b0;">
+                    <span class="completed-badge">✓ تم الإكمال</span>
+                    <h3>2. لغة التواصل الاجتماعي (SNS)</h3>
+                    <p>كيف يختصر اليابانيون الكلمات عند الدردشة (w, kusa, lol).</p>
+                </a>
+
+                <div class="lesson-card" style="opacity: 0.6; border-right-color: #795548;">
+                    <h3>3. عامية الأنمي (قريباً)</h3>
+                    <p>تعبيرات تسمعها فقط في عوالم الشونين والسينين.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 30px;">
+            <a href="https://www.facebook.com/share/1HHhsEmRT9/" target="_blank" class="fb-footer-btn">تابعوني لجديد
+                العامية 🔗</a>
+        </footer>
+    </main>
+
+    <script>
+        window.onload = function () {
+            var completed = JSON.parse(localStorage.getItem('completedLessons') || "[]");
+            document.querySelectorAll('.lesson-card').forEach(function (card) {
+                var href = card.getAttribute('href');
+                if (completed.indexOf(href) > -1) { card.classList.add('is-done'); }
+            });
+        };
+    </script>
+</body>
+
+</html>

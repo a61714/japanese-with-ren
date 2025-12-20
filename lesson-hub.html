@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فهرس الدروس | رين سينسي</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="container">
+            <h1>LIBRARY OF LESSONS 📚</h1>
+            <a href="index.html" style="text-decoration: none; color: white; font-weight: bold;">← العودة للرئيسية</a>
+        </div>
+    </header>
+
+    <main class="container" dir="rtl">
+
+        <section class="hub-category">
+            <h2 style="color: var(--nhk-blue); border-right: 5px solid var(--nhk-blue); padding-right: 15px;">🏁
+                الأساسيات والتعارف</h2>
+            <div class="lesson-grid">
+                <a href="intro.html" class="lesson-card">
+                    <span class="completed-badge">✓ تم</span>
+                    <h3>التعريف بالنفس (Jikoshoukai)</h3>
+                    <p>كيف تقدم نفسك باحترافية بأسلوب رين سينسي.</p>
+                </a>
+                <a href="thank-you.html" class="lesson-card">
+                    <span class="completed-badge">✓ تم</span>
+                    <h3>طرق الشكر باليابانية</h3>
+                    <p>تعلم كيف تشكر الناس بمختلف مستويات الأدب.</p>
+                </a>
+                <a href="apology.html" class="lesson-card">
+                    <span class="completed-badge">✓ تم</span>
+                    <h3>فن الاعتذار</h3>
+                    <p>متى نستخدم Sumimasen ومتى نستخدم Gomen؟</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="hub-category" style="margin-top: 40px;">
+            <h2 style="color: #28a745; border-right: 5px solid #28a745; padding-right: 15px;">💰 الأرقام والحياة اليومية
+            </h2>
+            <div class="lesson-grid">
+                <a href="numbers.html" class="lesson-card">
+                    <span class="completed-badge">✓ تم</span>
+                    <h3>الأرقام الأساسية (1-99)</h3>
+                    <p>القواعد المنطقية لبناء الأرقام اليابانية.</p>
+                </a>
+                <a href="shopping.html" class="lesson-card">
+                    <span class="completed-badge">✓ تم</span>
+                    <h3>التسوق والأرقام الكبيرة</h3>
+                    <p>كيف تشتري وتتعامل بالين الياباني في المحلات.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="hub-category" style="margin-top: 40px;">
+            <h2 style="color: var(--jp-red); border-right: 5px solid var(--jp-red); padding-right: 15px;">⚡ اليابانية
+                العامية (Slang)</h2>
+            <div class="lesson-grid">
+                <a href="slang-hub.html" class="lesson-card slang-hub-card">
+                    <h3>دليل العامية الشامل</h3>
+                    <p>ادخل إلى عالم لغة الشارع والسوشيال ميديا.</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-section">
+        <div class="container">
+            <a href="https://www.facebook.com/share/1HHhsEmRT9/" target="_blank" class="fb-footer-btn">تابعوني على
+                فيسبوك 🔗</a>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            var completed = JSON.parse(localStorage.getItem('completedLessons') || "[]");
+            document.querySelectorAll('.lesson-card').forEach(function (card) {
+                var href = card.getAttribute('href');
+                if (completed.indexOf(href) > -1) { card.classList.add('is-done'); }
+            });
+        };
+    </script>
+</body>
+
+</html>
